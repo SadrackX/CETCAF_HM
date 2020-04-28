@@ -37,6 +37,8 @@ if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "core\init_headless.sqf";
 };
 
+#include "scripts\noAbort.sqf"
+
 //VIEW DISTANCE
 tawvd_disablenone = true;
 tawvd_maxRange = 15000;
