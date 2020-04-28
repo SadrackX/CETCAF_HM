@@ -121,7 +121,7 @@ force ace_nametags_showPlayerNames = 1;
 force ace_nametags_showPlayerRanks = true;
 force ace_nametags_showSoundWaves = 1;
 force ace_nametags_showVehicleCrewInfo = true;
-force ace_nametags_tagSize = 0;
+force ace_nametags_tagSize = 1;
 
 // ACE Explosivos
 force ace_explosives_explodeOnDefuse = true;
@@ -202,7 +202,7 @@ force ace_viewdistance_viewDistanceOnFoot = 9;
 
 // ACE LogÃ­stica
 force ace_cargo_enable = true;
-force ace_cargo_loadTimeCoefficient = 5;
+force ace_cargo_loadTimeCoefficient = 4.02125;
 force ace_cargo_paradropTimeCoefficent = 2.5;
 force ace_rearm_distance = 20;
 force ace_rearm_level = 2;
@@ -219,8 +219,8 @@ force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 4;
 force ace_repair_fullRepairRequiredItems = ["ToolKit"];
 force ace_repair_miscRepairRequiredItems = ["ToolKit"];
-force ace_repair_repairDamageThreshold = 0.84705;
-force ace_repair_repairDamageThreshold_engineer = 0.84705;
+force ace_repair_repairDamageThreshold = 0.49501;
+force ace_repair_repairDamageThreshold_engineer = 0.945505;
 force ace_repair_wheelRepairRequiredItems = ["ToolKit"];
 
 // ACE MÃ©dico
@@ -452,6 +452,144 @@ force acex_volume_lowerInVehicles = true;
 force acex_volume_reduction = 5;
 force acex_volume_remindIfLowered = true;
 force acex_volume_showNotification = false;
+
+// Achilles - Available Factions
+Achilles_var_BLU_CTRG_F = true;
+Achilles_var_BLU_F = true;
+Achilles_var_BLU_G_F = true;
+Achilles_var_BLU_GEN_F = true;
+Achilles_var_BLU_T_F = true;
+Achilles_var_BLU_W_F = true;
+Achilles_var_CIV_F = true;
+Achilles_var_CIV_IDAP_F = true;
+Achilles_var_IND_C_F = true;
+Achilles_var_IND_E_F = true;
+Achilles_var_IND_F = true;
+Achilles_var_IND_G_F = true;
+Achilles_var_IND_L_F = true;
+Achilles_var_Interactive_F = true;
+Achilles_var_OPF_F = true;
+Achilles_var_OPF_G_F = true;
+Achilles_var_OPF_GEN_F = true;
+Achilles_var_OPF_R_F = true;
+Achilles_var_OPF_T_F = true;
+Achilles_var_OPF_V_F = true;
+Achilles_var_rhs_faction_socom = true;
+Achilles_var_rhs_faction_usaf = true;
+Achilles_var_rhs_faction_usarmy = true;
+Achilles_var_rhs_faction_usarmy_d = true;
+Achilles_var_rhs_faction_usarmy_wd = true;
+Achilles_var_rhs_faction_usmc = true;
+Achilles_var_rhs_faction_usmc_d = true;
+Achilles_var_rhs_faction_usmc_wd = true;
+Achilles_var_rhs_faction_usn = true;
+Achilles_var_Virtual_F = true;
+
+// Achilles - Available Modules
+Achilles_var_Achilles_ACE_Heal_Module = true;
+Achilles_var_Achilles_ACE_ImmersiveHeal_Module = true;
+Achilles_var_Achilles_ACE_Injury_Module = true;
+Achilles_var_Achilles_AddECM_Module = true;
+Achilles_var_Achilles_Animation_Module = true;
+Achilles_var_Achilles_Attach_To_Module = true;
+Achilles_var_Achilles_Bind_Variable_Module = true;
+Achilles_var_Achilles_Buildings_Destroy_Module = true;
+Achilles_var_Achilles_Buildings_LockDoors_Module = true;
+Achilles_var_Achilles_Buildings_ToggleLight_Module = true;
+Achilles_var_Achilles_CAS_Module = true;
+Achilles_var_Achilles_Change_Ability_Module = true;
+Achilles_var_Achilles_Change_Altitude_Module = true;
+Achilles_var_Achilles_Chatter_Module = true;
+Achilles_var_Achilles_Create_Universal_Target_Module = true;
+Achilles_var_Achilles_DevTools_FunctionViewer = true;
+Achilles_var_Achilles_DevTools_ShowInAnimViewer = true;
+Achilles_var_Achilles_DevTools_ShowInConfig = true;
+Achilles_var_Achilles_Earthquake_Module = true;
+Achilles_var_Achilles_Hide_Objects_Module = true;
+Achilles_var_Achilles_IED_Module = true;
+Achilles_var_Achilles_Make_Invincible_Module = true;
+Achilles_var_Achilles_Module_Arsenal_AddFull = true;
+Achilles_var_Achilles_Module_Arsenal_CopyToClipboard = true;
+Achilles_var_Achilles_Module_Arsenal_CreateCustom = true;
+Achilles_var_Achilles_Module_Arsenal_Paste = true;
+Achilles_var_Achilles_Module_Arsenal_Remove = true;
+Achilles_var_Achilles_Module_Change_Side_Relations = true;
+Achilles_var_Achilles_Module_Equipment_Attach_Dettach_Effect = true;
+Achilles_var_Achilles_Module_FireSupport_CASBomb = true;
+Achilles_var_Achilles_Module_FireSupport_CASGun = true;
+Achilles_var_Achilles_Module_FireSupport_CASGunMissile = true;
+Achilles_var_Achilles_Module_FireSupport_CASMissile = true;
+Achilles_var_Achilles_Module_Manage_Advanced_Compositions = true;
+Achilles_var_Achilles_Module_Player_Set_Frequencies = true;
+Achilles_var_Achilles_Module_Rotation = true;
+Achilles_var_Achilles_Module_Spawn_Advanced_Composition = true;
+Achilles_var_Achilles_Module_Spawn_Carrier = true;
+Achilles_var_Achilles_Module_Spawn_Destroyer = true;
+Achilles_var_Achilles_Module_Spawn_Effects = true;
+Achilles_var_Achilles_Module_Spawn_Explosives = true;
+Achilles_var_Achilles_Module_Spawn_Intel = true;
+Achilles_var_Achilles_Module_Supply_Drop = true;
+Achilles_var_Achilles_Module_Zeus_AssignZeus = true;
+Achilles_var_Achilles_Module_Zeus_SwitchUnit = true;
+Achilles_var_Achilles_Nuke_Module = true;
+Achilles_var_Achilles_Patrol_Module = true;
+Achilles_var_Achilles_Set_Date_Module = true;
+Achilles_var_Achilles_Set_Height_Module = true;
+Achilles_var_Achilles_Set_Weather_Module = true;
+Achilles_var_Achilles_Sit_On_Chair_Module = true;
+Achilles_var_Achilles_SuicideBomber_Module = true;
+Achilles_var_Achilles_Suppressive_Fire_Module = true;
+Achilles_var_Achilles_SurrenderUnit_Module = true;
+Achilles_var_Achilles_Toggle_Simulation_Module = true;
+Achilles_var_Achilles_Transfer_Ownership_Module = true;
+Achilles_var_Ares_Artillery_Fire_Mission_Module = true;
+Achilles_var_Ares_Module_Bahaviour_Garrison_Nearest = true;
+Achilles_var_Ares_Module_Bahaviour_UnGarrison = true;
+Achilles_var_Ares_Module_Behaviour_Search_Nearby_And_Garrison = true;
+Achilles_var_Ares_Module_Behaviour_Search_Nearby_Building = true;
+Achilles_var_Ares_Module_Dev_Tools_Create_Mission_SQF = true;
+Achilles_var_Ares_Module_Dev_Tools_Execute_Code = true;
+Achilles_var_Ares_Module_Equipment_Flashlight_IR_ON_OFF = true;
+Achilles_var_Ares_Module_Equipment_NVD_TACLIGHT_IR = true;
+Achilles_var_Ares_Module_Equipment_Turret_Optics = true;
+Achilles_var_Ares_Module_Player_Change_Player_Side = true;
+Achilles_var_Ares_Module_Player_Create_Teleporter = true;
+Achilles_var_Ares_Module_Player_Teleport = true;
+Achilles_var_Ares_Module_Reinforcements_Create_Lz = true;
+Achilles_var_Ares_Module_Reinforcements_Create_Rp = true;
+Achilles_var_Ares_Module_Reinforcements_Spawn_Units = true;
+Achilles_var_Ares_Module_Spawn_Submarine = true;
+Achilles_var_Ares_Module_Spawn_Trawler = true;
+Achilles_var_Ares_Module_Zeus_Add_Remove_Editable_Objects = true;
+Achilles_var_Ares_Module_Zeus_Hint = true;
+Achilles_var_Ares_Module_Zeus_Switch_Side = true;
+Achilles_var_Ares_Module_Zeus_Visibility = true;
+Achilles_var_ModulePunishment_F = true;
+
+// Achilles - Curator Vision Modes
+achilles_curator_vision_blackhot = false;
+achilles_curator_vision_blackhotgreencold = false;
+achilles_curator_vision_blackhotredcold = false;
+achilles_curator_vision_greenhotcold = false;
+achilles_curator_vision_nvg = true;
+achilles_curator_vision_redgreen = false;
+achilles_curator_vision_redhot = false;
+achilles_curator_vision_whitehot = true;
+achilles_curator_vision_whitehotredcold = false;
+
+// Achilles - Debug
+Achilles_Debug_Output_Enabled = false;
+
+// Achilles - Module Defaults
+Achilles_var_setRadioFrequenciesLR_Default = "50";
+Achilles_var_setRadioFrequenciesSR_Default = "150";
+
+// Achilles - User Interface
+Achilles_var_iconSelection = "Achilles_var_iconSelection_Ares";
+Achilles_var_moduleTreeCollapse = true;
+Achilles_var_moduleTreeDLC = true;
+Achilles_var_moduleTreeHelmet = false;
+Achilles_var_moduleTreeSearchPatch = false;
 
 // ASR AI3
 force asr_ai3_control_onteamswitchleader = true;
