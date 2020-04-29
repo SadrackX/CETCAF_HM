@@ -30,6 +30,7 @@ showHUD[] = {
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"
 #include "core\fnc\debug\defines.hpp"
+#include "scripts\SATCOM\init_interface.hpp"
 
 class RscTitles {
     class Default {

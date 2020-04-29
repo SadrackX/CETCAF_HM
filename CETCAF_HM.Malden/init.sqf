@@ -38,7 +38,7 @@ if (!isDedicated && !hasInterface) then {
 };
 
 #include "scripts\noAbort.sqf"
-
+_variable = [] execVM "scripts\SATCOM\init_satellite.sqf";
 //VIEW DISTANCE
 tawvd_disablenone = true;
 tawvd_maxRange = 15000;
