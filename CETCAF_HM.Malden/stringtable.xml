@@ -296,6 +296,16 @@
                 <Chinesesimp>&lt;img image='\A3\Data_F_Enoch\Logos\arma3_enoch_logo_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;电磁场:&lt;/marker&gt;&lt;br/&gt; UAV 和电磁脉冲装置(EMP)会产生两种不同的电磁场。为了传输信号, UAV 会发出频率在 390MHz 到 500MHz 之间的电磁场。电磁脉冲装置是一种能使载具上的电子设备失效的武器。它的频率范围在 78MHz 到 89MHz 之间, 其能量足以使电灯、引擎和航空电子设备实效。&lt;br/&gt;&lt;br/&gt; &lt;img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\defend_ca.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;防护:&lt;/marker&gt;&lt;br/&gt; UAV 产生的电磁场是安全的, 但电磁脉冲装置将会影响500米范围内引擎开启的载具。&lt;br/&gt;&lt;br/&gt; &lt;img image='\z\ace\addons\minedetector\ui\icon_mineDetectorOn.paa' width='20' height='20'/&gt; &lt;marker name='blufor_base'&gt;探测:&lt;/marker&gt;&lt;br/&gt; 你可以使用频谱探测仪来探测电磁场的源头。波形的峰值取决于发射器与天线之间的距离和角度。最大探测距离为1000米。</Chinesesimp>
             </Key>
         </Container>
+		
+		<Container name="Documentation: REGRAS">
+            <Key ID="STR_HAM_DOC_REGRAS_TITLE">
+                <Original>Regras de conduta e operacional</Original>
+            </Key>
+            <Key ID="STR_HAM_DOC_REGRAS_TEXT">
+				<Original>&lt;marker name='blufor_base'&gt;Conduta:&lt;/marker&gt;&lt;br/&gt; - Exigimos total respeito entre os operadores sob todos os aspectos e principalmente no tocante a credo, raça, preferência política e sexual. O desrespeito a qualquer dessas regras terá como consequência o banimento imediato do TS e do Servidor.&lt;br/&gt;&lt;br/&gt;&lt;marker name='blufor_base'&gt;Operacional:&lt;/marker&gt;&lt;br/&gt;- É terminantemente proibido, a qualquer operador, atirar na base. A primeira ocorrência gerará advertência verbal. A reinscidência acarretará a suspensão temporaria do infrator por 15 dias, do TS e do SV;&lt;br/&gt;&lt;br/&gt;- É proibido deixar qualquer equipamento jogado no chão;&lt;br/&gt;&lt;br/&gt;- Para veículos perdidos, faz-se necessário o resgate. Caso não seja possível, favor marcar em carta, tirar um print e postar no grupo para posterior resgate;&lt;br/&gt;&lt;br/&gt;- Veículos utilizados para transporte dentro da ilha base devem ser retornados à garagem no HQ;&lt;br/&gt;&lt;br/&gt;- O comando geral de uma operação já em andamento deve passar imediatamente para o membro da Fear que se conectar, salvo, já haja algum membro conectado ou por orientação do mesmo para não receber o comando geral da operação;&lt;br/&gt;&lt;br/&gt;- Mantenham o RP SEMPRE na persistente e nos treinamentos;&lt;br/&gt;&lt;br/&gt;- É proibido terminantemente, sob pena de banimento, que operadores atirem uns nos outros, seja por diversão mútua ou por qualquer dezavença entre os envolvidos. Casos acidentais serão passíveis de advertência verbal a nível de recomendação de segurança.</Original>
+            </Key>
+        </Container>
+		
     </Package>
     <Package name="Parameters">
         <Container name="Parameters: Time">

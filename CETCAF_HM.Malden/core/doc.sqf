@@ -60,6 +60,10 @@ player createDiaryRecord [_MainCategory, [localize "STR_ACE_Interaction_DisplayN
 
 //Version
 player createDiaryRecord [_MainCategory, [localize "STR_A3_FM_Welcome4",
-        format (["<img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/> Version %1.%2.%3 <img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/>"] + btc_version)
+        format (["<img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/> Version %1.%2.%3 MODED <img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/>"] + btc_version)
     ]
 ];
+
+player createDiarySubject ["Regras de conduta e operacional", "Regras do Cetcaf"];
+
+player createDiaryRecord ["Regras de conduta e operacional", [localize "STR_HAM_DOC_REGRAS_TITLE", localize "STR_HAM_DOC_REGRAS_TEXT"]];
