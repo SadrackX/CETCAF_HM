@@ -603,7 +603,7 @@ btc_fnc_lift_getLiftable = {
 };
 
 btc_ropes_deployed = false;
-btc_lift_min_h  = 7;
+btc_lift_min_h  = 1;
 btc_lift_max_h  = 32;
 btc_lift_radius = 4;
 btc_lift_HUD_x  = 0.874;
