@@ -37,7 +37,6 @@ if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "core\init_headless.sqf";
 };
 
-#include "scripts\noAbort.sqf"
 _variable = [] execVM "scripts\SATCOM\init_satellite.sqf";
 //VIEW DISTANCE
 tawvd_disablenone = true;
