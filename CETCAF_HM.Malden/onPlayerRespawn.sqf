@@ -1,4 +1,4 @@
-
+_null = (_this select 1) execVM "scripts\BuryCorpse.sqf";
 //enableSentences false;
 0 fadeRadio 0;
 enableRadio false;
@@ -14,4 +14,3 @@ enableRadio false;
 	5 enableChannel [true, false];
 	6 enableChannel [false, false];
 	
-_null = (_this select 1) execVM "scripts\BuryCorpse.sqf";
