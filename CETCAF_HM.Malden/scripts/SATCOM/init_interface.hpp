@@ -19,7 +19,6 @@ class RscInfoBack
 	style = 512;
 	ColorBackground[] = {0,0,0,0};
 	colorText[] = {0,0,0,0};
-	fade = 1;
 	shadow = 1;
 	font = "puristaMedium";
 	SizeEx = 0.025;
@@ -101,7 +100,7 @@ class SAT_RscSatellite
 			y = safezoneY + safezoneH - (0.09 * safezoneW);
 			w = 0.3;
 			h = 0.05;
-			text = "RASTREAMENTO";
+			text = "RASTREAMENTO -OFF-";
 		};
 		class uhf: ST_RscText
 		{
@@ -213,7 +212,8 @@ class SAT_RscSatellite
 			w = 0.003;
 			h = 0.06 * safezoneW;
 		};
-		//net
+		
+		//linhas
 		class net_h_1: RscLine
 		{
 			ColorBackground[] = {1,1,1,0.2};

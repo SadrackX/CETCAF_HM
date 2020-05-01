@@ -4,14 +4,14 @@
 //variables
 SAT_SatelliteInitialHeight = 800; 
 SAT_SatelliteFOV = 0.2; 
-SAT_SatelliteZoom = 39.7; 
+SAT_SatelliteZoom = 39.7; //39.7
 SAT_SatelliteNorthMovementDelta = 0;
 SAT_SatelliteSouthMovementDelta = 0;
 SAT_SatelliteEastMovementDelta = 0;
 SAT_SatelliteWestMovementDelta = 0;
 SAT_ViewDistance = 0;
-SAT_ViewDistanceNew = 3000;
-SAT_TimeZone = "[UTC-3]";
+SAT_ViewDistanceNew = 5000;
+SAT_SatelliteActive = false;
 
 //compile functions
 SAT_timeFunction = compile preprocessFileLineNumbers "scripts\SATCOM\time_function.sqf";
@@ -26,5 +26,4 @@ SAT_keyEventFunction = compile preprocessFileLineNumbers "scripts\SATCOM\key_fun
 SAT_mouseZChanged = compile preprocessFileLineNumbers "scripts\SATCOM\mouseZChanged.sqf";
 SAT_keyMain = compile preprocessFileLineNumbers "scripts\SATCOM\key_main.sqf";
 SAT_startSatellite = compile preprocessFileLineNumbers "scripts\SATCOM\start_satellite.sqf";
-SAT_switcher = compile preprocessFileLineNumbers "scripts\SATCOM\switcher.sqf";
 SAT_redefineDefaultPos = compile preprocessFileLineNumbers "scripts\SATCOM\redefine_position.sqf";
