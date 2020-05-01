@@ -43,10 +43,10 @@ force ace_mk6mortar_useAmmoHandling = true;
 // ACE AudiÃ§Ã£o
 force ace_hearing_autoAddEarplugsToUnits = true;
 force ace_hearing_disableEarRinging = false;
-force ace_hearing_earplugsVolume = 0.18774;
+force ace_hearing_earplugsVolume = 0.39663;
 force ace_hearing_enableCombatDeafness = true;
 force ace_hearing_enabledForZeusUnits = true;
-force ace_hearing_unconsciousnessVolume = 0.4;
+force ace_hearing_unconsciousnessVolume = 0.285658;
 
 // ACE BalÃ­stica avanÃ§ada
 force ace_advanced_ballistics_ammoTemperatureEnabled = true;
@@ -250,7 +250,7 @@ force ace_medical_statemachine_AIUnconsciousness = true;
 force ace_medical_statemachine_cardiacArrestTime = 300;
 force ace_medical_statemachine_fatalInjuriesAI = 0;
 force ace_medical_statemachine_fatalInjuriesPlayer = 0;
-force ace_medical_treatment_advancedBandages = 1;
+force ace_medical_treatment_advancedBandages = 2;
 force ace_medical_treatment_advancedDiagnose = true;
 force ace_medical_treatment_advancedMedication = true;
 force ace_medical_treatment_allowLitterCreation = true;
