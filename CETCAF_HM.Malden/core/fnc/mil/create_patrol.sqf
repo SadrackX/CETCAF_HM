@@ -71,7 +71,7 @@ btc_military_id = btc_military_id + 1;
 
 switch (_random) do {
     case 1 : {
-        private _n_units = 5 + (round random 8);
+        private _n_units = 3 + (round random 4);
         _pos = [_pos, 0, 50, 10, false] call btc_fnc_findsafepos;
 
         [_group, _pos, _n_units] call btc_fnc_mil_createUnits;

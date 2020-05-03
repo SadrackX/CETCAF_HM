@@ -108,7 +108,7 @@ if !(_data_units isEqualTo []) then {
         case "NameLocal" : {3};
         case "NameVillage" : {4};
         case "NameCity" : {4};
-        case "NameCityCapital" : {6};
+        case "NameCityCapital" : {5};
         case "Airport" : {7};
         case "NameMarine" : {2};
         default {1.5};
