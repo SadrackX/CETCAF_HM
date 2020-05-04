@@ -10,7 +10,7 @@ respawnButton 					= 0;
 respawn 						= 3; 									// Players respawn at base
 respawnDelay 					= 300; 									// Players spectate for 5 minutes(300s) between respawns
 respawnTemplates[] 				= {"ace_spectator"}; 					// Enables the spectator template for all
-//cba_settings_hasSettingsFile	= 1;
+cba_settings_hasSettingsFile	= 1;
 disableChannels[] 				= {0,1,2,3,4,6};    					// 0 = Global | 1 = Side | 2 = Command | 3 = Group | 4 = Vehicle | 5 = Direct | 6 = System
 
 #include "core\fnc\common\dlg.hpp"
@@ -19,6 +19,19 @@ disableChannels[] 				= {0,1,2,3,4,6};    					// 0 = Global | 1 = Side | 2 = Co
 #include "core\fnc\debug\defines.hpp"
 #include "scripts\SATCOM\init_interface.hpp"
 #include "scripts\MED_TREINAMENTO\content.hpp"
+
+showHUD[] = {
+	1,	// Scripted HUD (same as showHUD command)
+	1,	// Vehicle and unit info
+	1,	// Vehicle radar [HIDDEN]
+	1,	// Vehicle compass [HIDDEN]
+	1,	// Tank direction indicator
+	1,	// Commanding menu
+	1,	// Group info bar
+	1,	// HUD weapon cursors
+	1,	// Vehicle display panels
+	1	// "x killed by y" systemChat messages
+};
 
 onPauseScript = "scripts\noAbort.sqf";
 
