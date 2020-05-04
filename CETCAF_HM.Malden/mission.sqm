@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=24979;
+		nextID=24991;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1826;
+		nextID=1876;
 	};
 	class Camera
 	{
-		pos[]={9913.2275,177.35915,3764.2986};
-		dir[]={-0.59282511,-0.72943658,0.34168765};
-		up[]={-0.63198209,0.68406111,0.36425963};
-		aside[]={0.49942744,2.4572946e-006,0.86648905};
+		pos[]={9937.7285,150.2753,3890.1282};
+		dir[]={-0.65746552,-0.7098791,0.25278375};
+		up[]={-0.66270161,0.70420849,0.254798};
+		aside[]={0.35888875,3.2916432e-007,0.93342757};
 	};
 };
 binarizationWanted=0;
@@ -15866,6 +15866,7 @@ class Mission
 				};
 			};
 			id=1504;
+			atlOffset=96.5;
 		};
 		class Item2
 		{
@@ -48557,11 +48558,10 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9792.4775,30.908831,3808.3701};
+				position[]={0,-96.5,0};
 			};
 			id=24952;
 			type="ALiVE_require";
-			atlOffset=1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48781,11 +48781,10 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9785.8672,35.17403,3812.2529};
+				position[]={0,-96.5,0};
 			};
 			id=24953;
 			type="ALiVE_sys_data";
-			atlOffset=3.9110012;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48917,7 +48916,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="false";
+							value="true";
 						};
 					};
 				};
@@ -48986,7 +48985,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9800.3809,30.799961,3805.166};
+				position[]={0,-96.5,0};
 			};
 			id=24955;
 			type="ALiVE_SYS_playeroptions";
