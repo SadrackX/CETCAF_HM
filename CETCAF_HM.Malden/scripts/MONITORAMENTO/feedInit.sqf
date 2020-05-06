@@ -4,11 +4,7 @@ private ["_feedArray","_MonitorName","_array","_newArray"];
 _monitorArray = (_this select 0);
 _monitorHDD = _monitorArray select 0;
 _newArray = (_this select 1);
-_MonitorName = format ["%1",_monitorHDD];
-
- 
-
-	
+_MonitorName = format ["%1",_monitorHDD];	
 	
 	_feedArray=server getvariable _MonitorName;	
 	
@@ -42,7 +38,7 @@ if (!isserver || !isdedicated)
 		then {
 			{
 		null = [_x,_feedArray,server] execVM "scripts\MONITORAMENTO\livefeed.sqf";
-		_x setObjectTexture [0,'#(argb,8,8,3)color(0,0,1,1)'];
+		_x setObjectTexture [0,"core\img\off.jpg"];
 		_x allowdamage false;
 		_x enablesimulation false;
 			}foreach _monitorArray;
