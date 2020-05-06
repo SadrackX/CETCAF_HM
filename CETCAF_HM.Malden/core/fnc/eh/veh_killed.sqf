@@ -28,6 +28,7 @@ private _marker = createMarker [format ["m_%1", _vehicle], getPos _vehicle];
 _marker setMarkerType "mil_dot";
 _marker setMarkerColor "ColorRed";
 _marker setMarkerSize [0.5,0.5];
+_marker setMarkerAlpha 0;
 //[_marker, "STR_BTC_HAM_O_EH_VEHKILLED_MRK", getText (configFile >> "cfgVehicles" >> typeOf _vehicle >> "displayName")] remoteExecCall ["btc_fnc_set_markerTextLocal", [0, -2] select isDedicated, _marker]; // %1 wreck
 
 _vehicle setVariable ["marker", _marker];
