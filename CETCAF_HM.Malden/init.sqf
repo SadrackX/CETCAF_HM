@@ -46,6 +46,7 @@ tawvd_maxRange = 15000;
 #include "scripts\arsenal_fire.sqf";
 
 null = [[mnt_01,mnt_02,mnt_03,mnt_04,mnt_05,mnt_06,mnt_07],playableUnits] execVM "scripts\MONITORAMENTO\Feedinit.sqf";
+null = [sino,sino_1,sino_2] execVM "scripts\sino.sqf";
 
 asr_ai3_main_sets = [ 																// for each level: skilltype, [<min value>, <random value added to min>]
 		[	"general",[1.00,0.0],	"aiming",[1.00,0.0],	"spotting",[1.00,0.0]	],	// 0:  super-AI (only used for testing)
