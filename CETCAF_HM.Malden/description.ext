@@ -4,7 +4,7 @@ author = "[CETCAF] TEAM";
 onLoadName = CETCAF_HM_Malden;
 onLoadMission = "Hearts and Minds moded";
 
-enabledebugconsole 				= 0;
+enabledebugconsole 				= 1;  									//0 - Default behavior, available only in editor 1 - Available in SP and for hosts / logged in admins in MP 2 - Available for everyone
 forceRotorLibSimulation			= 1;   									//0 - based on player's options /1 - enabled (advanced mode) /2 - disabled (default flight mode)
 respawnButton 					= 0;
 respawn 						= 3; 									// Players respawn at base
