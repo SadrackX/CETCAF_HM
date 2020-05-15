@@ -291,11 +291,13 @@ if (isServer) then {
 					btc_veh_27,
 					btc_veh_28,
 					btc_veh_29,
-					//btc_veh_30,
-					//btc_veh_31,
+					btc_veh_30,
+					btc_veh_31,
 					btc_veh_32,
 					btc_veh_33,
-					btc_veh_34];
+					btc_veh_34,
+					btc_veh_35,
+					btc_veh_36];
     btc_helo = [btc_helo_1];
 
     // The two arrays below are prefixes of buildings and their multiplier.
