@@ -37,27 +37,14 @@ if (!isDedicated && !hasInterface) then {
     [] call compile preprocessFileLineNumbers "core\init_headless.sqf";
 };
 
-_variable = [] execVM "scripts\SATCOM\init_satellite.sqf";
 //VIEW DISTANCE
 tawvd_disablenone = true;
 tawvd_maxRange = 15000;
 
 #include "scripts\arsenal_medic.sqf";
 #include "scripts\arsenal_fire.sqf";
+[] execVM "Vcom\VcomInit.sqf";
 
+null = [] execVM "scripts\SATCOM\compile.sqf";
 null = [[mnt_01,mnt_02,mnt_03,mnt_04,mnt_05,mnt_06,mnt_07],playableUnits] execVM "scripts\MONITORAMENTO\Feedinit.sqf";
 null = [sino,sino_1,sino_2] execVM "scripts\sino.sqf";
-
-asr_ai3_main_sets = [ 																// for each level: skilltype, [<min value>, <random value added to min>]
-		[	"general",[1.00,0.0],	"aiming",[1.00,0.0],	"spotting",[1.00,0.0]	],	// 0:  super-AI (only used for testing)
-		[	"general",[0.80,0.5],	"aiming",[0.25,0.0],	"spotting",[0.6,0.0]	],	// 1:  sf 1
-		[	"general",[0.80,0.5],	"aiming",[0.25,0.0],	"spotting",[0.8,0.0]	],	// 2:  sf 2 (recon units, divers and spotters)
-		[	"general",[0.80,0.5],	"aiming",[0.4,0.2],		"spotting",[0.6,0.0]	],	// 3:  regular 1 (regular army leaders, marksmen)
-		[	"general",[0.6,0.3],	"aiming",[0.3,0.0],		"spotting",[0.6,0.0]	],	// 4:  regular 2 (regulars)
-		[	"general",[0.7,0.5],	"aiming",[0.4,0.0],		"spotting",[0.7,0.0]	],	// 5:  militia or trained insurgents, former regulars (insurgent leaders, marksmen)
-		[	"general",[0.6,0.3],	"aiming",[0.3,0.1],		"spotting",[0.6,0.0]	],	// 6:  some military training (insurgents)
-		[	"general",[0.5,0.2],	"aiming",[0.1,0.0],		"spotting",[0.4,0.0]	],	// 7:  no military training
-		[	"general",[0.5,0.5],	"aiming",[0.3,0.0],		"spotting",[0.6,0.0]	],	// 8:  pilot 1 (regular)
-		[	"general",[0.5,0.2],	"aiming",[0.2,0.0],		"spotting",[0.6,0.0]	],	// 9:  pilot 2 (insurgent)
-		[	"general",[0.80,0.5],	"aiming",[0.7,0.2],		"spotting",[0.8,0.0]	]	// 10: sniper 
-	];

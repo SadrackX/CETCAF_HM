@@ -49,7 +49,7 @@ if (btc_debug) then {
     _marker setMarkerShape "ELLIPSE";
     _marker setMarkerBrush "SolidBorder";
     _marker setMarkerSize [_radius_x + _radius_y + btc_city_radius, _radius_x + _radius_y + btc_city_radius];
-    _marker setMarkerAlpha 0;
+    _marker setMarkerAlpha 0.1;
     if (_has_en) then {
         _marker setMarkerColor "colorRed";
     } else {

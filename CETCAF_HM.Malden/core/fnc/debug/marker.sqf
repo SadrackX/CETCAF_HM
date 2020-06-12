@@ -31,9 +31,9 @@ private _cfgVehicles = configFile >> "CfgVehicles";
 {
     private _typeof = typeOf _x;
 
-    private _alpha = 0;
+    private _alpha = 0.2;
     if !((_owners select _forEachindex) isEqualTo 2) then {
-        _alpha = 0;
+        _alpha = 0.2;
     };
 
     private _color = [];

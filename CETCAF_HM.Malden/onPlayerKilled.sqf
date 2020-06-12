@@ -4,7 +4,7 @@ _starR  = "<img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\attack_ca.paa' al
 _starR  = _starR;
 
 _title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>Você morreu!!</t>";
-_text   = "<br />Espere 5 minutos para voltar a partida...";
+_text   = "<br />Espere 1 minuto para voltar a partida...";
 
 hint parseText (_starL + _starR + _title + _text);
 

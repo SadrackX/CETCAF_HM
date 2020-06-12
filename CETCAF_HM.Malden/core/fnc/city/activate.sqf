@@ -60,8 +60,8 @@ if (!_is_init) then {
         case "Hill" : {random 2};
         case "NameLocal" : {random 3.5};
         case "NameVillage" : {random 4.5};
-        case "NameCity" : {random 6};
-        case "NameCityCapital" : {random 7};
+        case "NameCity" : {random 5};
+        case "NameCityCapital" : {random 6};
         case "Airport" : {0};
         case "NameMarine" : {0};
     });
@@ -105,25 +105,25 @@ if !(_data_units isEqualTo []) then {
     // Maximum number of enemy group
     private _max_number_group = (switch _type do {
         case "Hill" : {3};
-        case "NameLocal" : {3};
-        case "NameVillage" : {4};
+        case "NameLocal" : {2};
+        case "NameVillage" : {3};
         case "NameCity" : {4};
-        case "NameCityCapital" : {5};
+        case "NameCityCapital" : {4};
         case "Airport" : {7};
         case "NameMarine" : {2};
         default {1.5};
     });
 
     if (_has_en) then {
-        for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random _max_number_group))) do {[_city, _radius, 1 + round random [0, 1, 2] , random 1] call btc_fnc_mil_create_group;};
+        for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random _max_number_group))) do {[_city, _radius, 1 + round random [0, 1, 2] , random 1] call btc_fnc_mil_create_group;};
     };
 
     //Spawn civilians
     if (_type != "Hill") then {
         private _max_number_group = (switch _type do {
-            case "NameLocal" : {3};
-            case "NameVillage" : {6};
-            case "NameCity" : {5};
+            case "NameLocal" : {5};
+            case "NameVillage" : {8};
+            case "NameCity" : {8};
             case "NameCityCapital" : {10};
             case "Airport" : {6};
             default {2};
@@ -142,13 +142,13 @@ if (_has_en) then {
 
 if (_city getVariable ["spawn_more", false]) then {
     _city setVariable ["spawn_more", false];
-    for "_i" from 1 to (round (_p_mil_group_ratio * (2 + random 3))) do {
-        [_city, _radius, 4 + round random 3, random 1] call btc_fnc_mil_create_group;
+    for "_i" from 1 to (round (_p_mil_group_ratio * (1 + random 2))) do {
+        [_city, _radius, 1 + round random 3, random 1] call btc_fnc_mil_create_group;
     };
     if (btc_p_veh_armed_spawn_more) then {
         private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
         for "_i" from 1 to (1 + round random 2) do {
-            [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
+            [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 1] call CBA_fnc_waitAndExecute;
         };
     };
 };
@@ -160,8 +160,8 @@ if !(btc_cache_pos isEqualTo []) then {
         [btc_cache_pos, 60, 4, _wp_sentry] call btc_fnc_mil_create_group;
         if (btc_p_veh_armed_spawn_more) then {
             private _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-            for "_i" from 1 to (1 + round random 3) do {
-                [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
+            for "_i" from 1 to (1 + round random 2) do {
+                [{_this call btc_fnc_mil_send}, [_closest, getPos _city, 1, selectRandom btc_type_motorized_armed], _i * 1] call CBA_fnc_waitAndExecute;
             };
         };
     };
@@ -170,26 +170,26 @@ if !(btc_cache_pos isEqualTo []) then {
 if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
     _city setVariable ["ho_units_spawned", true];
     private _pos = _city getVariable ["ho_pos", getPos _city];
-    [_pos, 20, 10 + round (_p_mil_group_ratio * random 6), 1.1] call btc_fnc_mil_create_group;
+    [_pos, 20, 10 + round (_p_mil_group_ratio * random 2), 1.1] call btc_fnc_mil_create_group;
     [_pos, 120, 1 + round random 2, _wp_sentry] call btc_fnc_mil_create_group;
     [_pos, 120, 1 + round random 2, _wp_sentry] call btc_fnc_mil_create_group;
     private _random = random 1;
     switch (true) do {
         case (_random <= 0.3) : {};
         case (_random > 0.3 && _random <= 0.75) : {
-            private _statics = btc_type_gl + btc_type_mg;
+            private _statics = btc_type_mg;
             [[(_pos select 0) + 7, (_pos select 1) + 7, 0], _statics, 45] call btc_fnc_mil_create_static;
         };
         case (_random > 0.75) : {
-            private _statics = btc_type_gl + btc_type_mg;
+            private _statics = btc_type_mg;
             [[(_pos select 0) + 7, (_pos select 1) + 7, 0], _statics, 45] call btc_fnc_mil_create_static;
             [[(_pos select 0) - 7, (_pos select 1) - 7, 0], _statics, 225] call btc_fnc_mil_create_static;
         };
     };
     if (btc_p_veh_armed_ho) then {
         _closest = [_city, btc_city_all select {!(_x getVariable ["active", false])}, false] call btc_fnc_find_closecity;
-        for "_i" from 1 to (2 + round random 3) do {
-            [{_this call btc_fnc_mil_send}, [_closest, _pos, 1, selectRandom btc_type_motorized_armed], _i * 2] call CBA_fnc_waitAndExecute;
+        for "_i" from 1 to (1 + round random 2) do {
+            [{_this call btc_fnc_mil_send}, [_closest, _pos, 1, selectRandom btc_type_motorized_armed], _i * 1] call CBA_fnc_waitAndExecute;
         };
     };
 };
@@ -216,7 +216,7 @@ private _number_patrol_active = count btc_patrol_active;
 if (_number_patrol_active < _p_patrol_max) then {
     private _n = 0;
     private _r = 0;
-    if (_has_en) then {_n = round (random 3 + (3/2));} else {_n = round random 2;};
+    if (_has_en) then {_n = round (random 3 + (3/2));} else {_n = round 0;};
     private _av = _p_patrol_max - _number_patrol_active;
     private _d = _n - _av;
     _r = if (_d > 0) then {_n - _d;} else {_n;};

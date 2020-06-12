@@ -267,7 +267,7 @@ force ace_medical_treatment_holsterRequired = 2;
 force ace_medical_treatment_litterCleanupDelay = 600;
 force ace_medical_treatment_locationEpinephrine = 0;
 force ace_medical_treatment_locationPAK = 2;
-force ace_medical_treatment_locationsBoostTraining = false;
+force ace_medical_treatment_locationsBoostTraining = true;
 force ace_medical_treatment_locationSurgicalKit = 0;
 force ace_medical_treatment_maxLitterObjects = 500;
 force ace_medical_treatment_medicEpinephrine = 1;
@@ -290,25 +290,25 @@ force ace_map_mapShowCursorCoordinates = false;
 force ace_markers_moveRestriction = 0;
 
 // ACE Menu de interaÃ§Ã£o
-force ace_gestures_showOnInteractionMenu = 2;
-force ace_interact_menu_actionOnKeyRelease = true;
+ace_gestures_showOnInteractionMenu = 2;
+ace_interact_menu_actionOnKeyRelease = true;
 force ace_interact_menu_addBuildingActions = true;
-force ace_interact_menu_alwaysUseCursorInteraction = true;
-force ace_interact_menu_alwaysUseCursorSelfInteraction = true;
-force ace_interact_menu_colorShadowMax = [0,0,0,1];
-force ace_interact_menu_colorShadowMin = [0,0,0,0.25];
-force ace_interact_menu_colorTextMax = [1,1,1,1];
-force ace_interact_menu_colorTextMin = [1,1,1,0.25];
-force ace_interact_menu_cursorKeepCentered = false;
-force ace_interact_menu_cursorKeepCenteredSelfInteraction = false;
-force ace_interact_menu_menuAnimationSpeed = 0;
-force ace_interact_menu_menuBackground = 0;
-force ace_interact_menu_menuBackgroundSelf = 0;
-force ace_interact_menu_selectorColor = [1,0,0];
-force ace_interact_menu_shadowSetting = 2;
-force ace_interact_menu_textSize = 2;
-force ace_interact_menu_useListMenu = false;
-force ace_interact_menu_useListMenuSelf = false;
+ace_interact_menu_alwaysUseCursorInteraction = true;
+ace_interact_menu_alwaysUseCursorSelfInteraction = true;
+ace_interact_menu_colorShadowMax = [0,0,0,1];
+ace_interact_menu_colorShadowMin = [0,0,0,0.25];
+ace_interact_menu_colorTextMax = [1,1,1,1];
+ace_interact_menu_colorTextMin = [1,1,1,0.25];
+ace_interact_menu_cursorKeepCentered = false;
+ace_interact_menu_cursorKeepCenteredSelfInteraction = false;
+ace_interact_menu_menuAnimationSpeed = 0;
+ace_interact_menu_menuBackground = 0;
+ace_interact_menu_menuBackgroundSelf = 0;
+ace_interact_menu_selectorColor = [1,0,0];
+ace_interact_menu_shadowSetting = 2;
+ace_interact_menu_textSize = 2;
+ace_interact_menu_useListMenu = false;
+ace_interact_menu_useListMenuSelf = false;
 
 // ACE Mira TelescÃ³pica
 force ace_scopes_correctZeroing = true;
@@ -344,7 +344,7 @@ force ace_pylons_searchDistance = 15;
 force ace_pylons_timePerPylon = 5;
 
 // ACE Ressurgimento
-force ace_respawn_removeDeadBodiesDisconnected = false;
+force ace_respawn_removeDeadBodiesDisconnected = true;
 force ace_respawn_savePreDeathGear = true;
 
 // ACE SimulaÃ§Ã£o de fragmentaÃ§Ã£o
@@ -595,40 +595,6 @@ Achilles_var_moduleTreeDLC = true;
 Achilles_var_moduleTreeHelmet = false;
 Achilles_var_moduleTreeSearchPatch = false;
 
-// ASR AI3
-force asr_ai3_control_onteamswitchleader = true;
-force asr_ai3_danger_AD_INSIDE = 50;
-force asr_ai3_danger_AD_OUTSIDE = 250;
-force asr_ai3_danger_ADVANCED_COVER = true;
-force asr_ai3_danger_ATTACK_TIMER = 60;
-force asr_ai3_danger_AUTO_ATTACK_WITHIN = 35;
-force asr_ai3_danger_COUNTER_ATTACK = true;
-force asr_ai3_danger_debug_findcover = false;
-force asr_ai3_danger_debug_reveal = false;
-force asr_ai3_danger_getinweapons = 0.8;
-force asr_ai3_danger_MAX_DIST_TO_COVER = 100;
-force asr_ai3_danger_NO_COVER_FOR_DANGER_WITHIN = 75;
-force asr_ai3_danger_radiorange = 1000;
-force asr_ai3_danger_rrdelaymin = 5;
-force asr_ai3_danger_rrdelayplus = 20;
-force asr_ai3_danger_seekcover = true;
-force asr_ai3_danger_usebuildings = 0.9;
-force asr_ai3_hitreactions_fallDown = true;
-force asr_ai3_hitreactions_STAY_IN_VEH = false;
-force asr_ai3_incognito_incodbg = false;
-force asr_ai3_incognito_incodiff = 2;
-force asr_ai3_incognito_incohint = true;
-force asr_ai3_main_factionskip_str = "['LOP_AFR_Civ','LOP_CHR_Civ','LOP_TAK_Civ']";
-force asr_ai3_rearming_debug_rearm = false;
-force asr_ai3_rearming_rearm = 50;
-force asr_ai3_rearming_rearm_fak = 1;
-force asr_ai3_rearming_rearm_mags = 2;
-force asr_ai3_skills_debug_setcamo = false;
-force asr_ai3_skills_debug_setskill = false;
-force asr_ai3_skills_packNVG = true;
-force asr_ai3_skills_setskills = true;
-force asr_ai3_skills_teamsuperai = false;
-
 // CBA UI
 cba_ui_notifyLifetime = 4;
 cba_ui_StorePasswords = 1;
@@ -638,6 +604,53 @@ force cba_disposable_dropUsedLauncher = 2;
 force cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
 cba_optics_usePipOptics = true;
+
+// LAMBS Danger
+force lambs_danger_CQB_formations_COLUMN = true;
+force lambs_danger_CQB_formations_DIAMOND = true;
+force lambs_danger_CQB_formations_ECH LEFT = false;
+force lambs_danger_CQB_formations_ECH RIGHT = false;
+force lambs_danger_CQB_formations_FILE = true;
+force lambs_danger_CQB_formations_LINE = true;
+force lambs_danger_CQB_formations_STAG COLUMN = false;
+force lambs_danger_CQB_formations_VEE = false;
+force lambs_danger_CQB_formations_WEDGE = false;
+force lambs_danger_CQB_range = 150;
+force lambs_danger_debug_Drawing = false;
+force lambs_danger_debug_FSM = false;
+force lambs_danger_debug_FSM_civ = false;
+force lambs_danger_debug_functions = false;
+force lambs_danger_disableAIAutonomousManoeuvres = false;
+force lambs_danger_disableAICallouts = false;
+force lambs_danger_disableAIDeployStaticWeapons = false;
+force lambs_danger_disableAIFindStaticWeapons = false;
+force lambs_danger_disableAIFleeing = false;
+force lambs_danger_disableAIGestures = false;
+force lambs_danger_disableAIHideFromTanksAndAircraft = false;
+force lambs_danger_disableAIImediateAction = false;
+force lambs_danger_disableAIPlayerGroup = false;
+force lambs_danger_disableAIPlayerGroupReaction = false;
+force lambs_danger_disableAIPlayerGroupSuppression = false;
+force lambs_danger_disableAutonomousFlares = false;
+force lambs_danger_disableAutonomousSmokeGrenades = false;
+force lambs_danger_maxRevealValue = 0.596878;
+force lambs_danger_minFriendlySuppressionDistance = 5;
+force lambs_danger_minSuppression_range = 20;
+force lambs_danger_panic_chance = 60.3003;
+force lambs_danger_radio_backpack = 2000;
+force lambs_danger_radio_disabled = false;
+force lambs_danger_radio_EAST = 500;
+force lambs_danger_radio_GUER = 500;
+force lambs_danger_radio_shout = 99.8037;
+force lambs_danger_radio_WEST = 500;
+force lambs_danger_RenderExpectedDestination = false;
+
+// LAMBS Danger Eventhandlers
+force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
+force lambs_eventhandlers_ExplosionReactionTime = 9;
+
+// LAMBS Danger WP
+force lambs_wp_autoAddArtillery = false;
 
 // Laxemann Immerse
 force L_Immerse_exShake = true;

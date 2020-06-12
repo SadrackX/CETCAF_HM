@@ -153,7 +153,7 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2500;
+    btc_patrol_area = 3000;
 
     //Rep
     btc_global_reputation = _p_rep;
