@@ -380,7 +380,7 @@ switch (_description) do {
 };
 
 [
-    _task_ids, _side, _description, _destination,
+    _task_ids, _side, _description, [],
     _task_id call BIS_fnc_taskState,
     _priority, false, false, _type, false
 ] call BIS_fnc_setTask;
