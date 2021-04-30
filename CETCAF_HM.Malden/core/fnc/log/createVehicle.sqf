@@ -15,6 +15,9 @@ Parameters:
     _fuelSource - Define the ACE cargo fuel source. [Array]
     _pylons - Set pylon loadout. [Array]
     _isContaminated - Set a vehicle contaminated. [Boolean]
+    _supplyVehicle - Is supply vehicle and current supply count. [Boolean]
+    _EDENinventory - Load EDEN inventory define in mission.sqm. [Array]
+    _allHitPointsDamage - Apply hit point damage to the vehicle. [Array]
 
 Returns:
 
@@ -37,14 +40,21 @@ params [
     ["_isRepairVehicle", false, [true]],
     ["_fuelSource", [], [[]]],
     ["_pylons", [], [[]]],
-    ["_isContaminated", false, [false]]
+    ["_isContaminated", false, [false]],
+    ["_supplyVehicle", [], [[]]],
+    ["_EDENinventory", [], [[]]],
+    ["_allHitPointsDamage", [], [[]]]
 ];
 
 private _veh  = createVehicle [_type, ASLToATL _pos, [], 0, "CAN_COLLIDE"];
 _veh setDir _dir;
 _veh setPosASL _pos;
 
-[_veh, _customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated] call btc_fnc_setVehProperties;
+[_veh, _customization, _isMedicalVehicle, _isRepairVehicle, _fuelSource, _pylons, _isContaminated, _supplyVehicle] call btc_fnc_setVehProperties;
+if !(_EDENinventory isEqualTo []) then {
+    _veh setVariable ["btc_EDENinventory", _EDENinventory];
+    [_veh, _EDENinventory] call btc_fnc_log_setCargo;
+};
 
 _veh setVariable ["btc_dont_delete", true];
 
@@ -52,6 +62,31 @@ if (getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "isUav") isEqualTo 1
     createVehicleCrew _veh;
 };
 
+if !(_allHitPointsDamage isEqualTo []) then {
+    {//Disable explosion effect on vehicle creation
+        [_veh, _forEachindex, _x, false] call ace_repair_fnc_setHitPointDamage;
+    } forEach (_allHitPointsDamage select 2);
+    if ((_allHitPointsDamage select 2) select {_x < 1} isEqualTo []) then {
+        _veh setVariable ["ace_cookoff_enable", false, true];
+        _veh setVariable ["ace_cookoff_enableAmmoCookoff", false, true];
+        _veh setDamage [1, false];
+		
+    };
+};
+
 _veh call btc_fnc_db_add_veh;
 
+_veh setDamage [0.8, false];
+_veh setVehicleAmmo 0;
+_veh setFuel 0;
+if !(_veh isKindOf "Helicopter") then {
+	_veh setHit ["wheel_1_1_steering",2];
+	_veh setHit ["wheel_1_2_steering",2];
+	_veh setHit ["wheel_1_3_steering",2];
+	_veh setHit ["wheel_1_4_steering",2];
+	_veh setHit ["wheel_2_1_steering",2];
+	_veh setHit ["wheel_2_2_steering",2];
+	_veh setHit ["wheel_2_3_steering",2];
+	_veh setHit ["wheel_2_4_steering",2];
+};
 _veh

@@ -32,9 +32,7 @@ private _city = selectRandom _useful;
 
 _city setVariable ["spawn_more", true];
 
-private _radius_x = _city getVariable ["RadiusX", 0];
-private _radius_y = _city getVariable ["RadiusY", 0];
-private _radius = _radius_x + _radius_y;
+private _radius = _city getVariable ["radius", 0];
 private _composition = [];
 private _tasksID = [];
 
@@ -111,6 +109,8 @@ for "_i" from 0 to (1 + round random 2) do {
             }, [_fx], 120] call CBA_fnc_waitAndExecute;
             btc_spect_emp deleteAt (btc_spect_emp find _box);
             publicVariable "btc_spect_emp";
+        } else {
+            0
         };
     }, [_destroy_taskID]] call CBA_fnc_addBISEventHandler;
 };

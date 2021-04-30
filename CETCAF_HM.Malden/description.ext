@@ -1,13 +1,13 @@
 
-loadScreen = "core\img\standby.jpg";
+loadScreen = "core\img\standby.paa";
 author = "[CETCAF] TEAM";
-onLoadName = CETCAF_HM_Malden;
+onLoadName = CETCAF_HM.Malden;
 onLoadMission = "Hearts and Minds moded";
 
 class Header
 {
 	gameType =  RPG;	// Game type
-	minPlayers =  0;	// minimum number of players the mission supports
+	minPlayers =  1;	// minimum number of players the mission supports
 	maxPlayers = 40;	// maximum number of players the mission supports
 };
 
@@ -18,14 +18,14 @@ respawn 						= 3; 									// Players respawn at base
 respawnDelay 					= 60; 									// Players spectate for 5 minutes(300s) between respawns
 respawnTemplates[] 				= {"Counter"}; 							// Enables the spectator template for all  ace_spectator
 cba_settings_hasSettingsFile	= 1;
-disableChannels[] 				= {0,1,2,3,4,6};    					// 0 = Global | 1 = Side | 2 = Command | 3 = Group | 4 = Vehicle | 5 = Direct | 6 = System
+disableChannels[] 				= {0,1,2,4,5,6};    					// 0 = Global | 1 = Side | 2 = Command | 3 = Group | 4 = Vehicle | 5 = Direct | 6 = System
 
 #include "core\fnc\common\dlg.hpp"
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"
 #include "core\fnc\debug\defines.hpp"
-#include "scripts\SATCOM\main\init_interface.hpp"
-#include "scripts\MED_TREINAMENTO\content.hpp"
+#include "scripts\SDK_SATCOM\main\init_interface.hpp"
+#include "scripts\SDK_MED\fnc\content.hpp"
 
 showHUD[] = {
 	1,	// Scripted HUD (same as showHUD command)

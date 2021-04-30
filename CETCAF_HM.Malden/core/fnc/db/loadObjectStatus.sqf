@@ -23,7 +23,8 @@ Author:
 params [
     ["_object_data", [], [[]]]
 ];
-_object_data params ["_type",
+_object_data params [
+    "_type",
     "_posWorld",
     "_dir",
     "_magClass",
@@ -45,6 +46,9 @@ if (_isContaminated) then {
     };
 };
 if !(_magClass isEqualTo "") then {_obj setVariable ["ace_rearm_magazineClass", _magClass, true]};
+if (getNumber(configFile >> "CfgVehicles" >> _type >> "isUav") isEqualTo 1) then {
+    createVehicleCrew _obj;
+};
 
 [_obj] call btc_fnc_log_init;
 [_obj, _cargo, _inventory] call btc_fnc_db_loadCargo;

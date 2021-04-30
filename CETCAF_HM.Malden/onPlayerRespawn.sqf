@@ -9,7 +9,7 @@ enableRadio false;
 	0 enableChannel [false, false];
 	1 enableChannel [false, false];
 	2 enableChannel [false, false];
-	3 enableChannel [false, false];
+	3 enableChannel [true, false];
 	4 enableChannel [false, false];
 	5 enableChannel [true, false];
 	6 enableChannel [false, false];

@@ -597,4 +597,5 @@ private _launcher_AA = [];
 private _backpacks = [];
 private _backpacks_big = [];
 
+
 btc_arsenal_loadout = [_uniforms, _vests, _helmets, _hoods, _laserdesignators, _night_visions, _weapons, _weapons_sniper, _weapons_machineGunner, _bipods, _pistols, _launcher_AT, _launcher_AA, _backpacks, _backpacks_big, [_radio, _radio, _radio, _radio]];

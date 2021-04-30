@@ -35,6 +35,7 @@ private _dir = getDir _veh;
 private _marker = _veh getVariable ["marker", ""];
 private _vehProperties = [_veh] call btc_fnc_getVehProperties;
 _vehProperties set [5, false];
+private _EDENinventory = _veh getVariable ["btc_EDENinventory", []];
 
 btc_vehicles = btc_vehicles - [_veh];
 
@@ -42,27 +43,15 @@ if (_marker != "") then {
     deleteMarker _marker;
     remoteExecCall ["", _marker];
 };
-deleteVehicle _veh;
-sleep 1;
-_veh = ([_type, [_x, _y, 1 + _z], _dir] + _vehProperties) call btc_fnc_log_createVehicle;
 
-_veh setDamage 0.8;
+if !((getVehicleCargo _veh) isEqualTo []) then {
+    _veh setVehicleCargo objNull;
+};
 
-_veh setHit ["wheel_1_1_steering",2];
-_veh setHit ["wheel_1_2_steering",2];
-_veh setHit ["wheel_1_3_steering",2];
-_veh setHit ["wheel_1_4_steering",2];
-_veh setHit ["wheel_2_1_steering",2];
-_veh setHit ["wheel_2_2_steering",2];
-_veh setHit ["wheel_2_3_steering",2];
-_veh setHit ["wheel_2_4_steering",2];
+[{
+    deleteVehicle _this;
+}, _veh] call CBA_fnc_execNextFrame;
 
-_veh setVehicleAmmo 0;
-
-_veh setFuel 0;
-
-_veh;
-
-_veh allowDamage false;
-sleep 1;
-_veh allowDamage true;
+[{
+    _this call btc_fnc_log_createVehicle;
+}, [_type, [_x, _y, 0.5 + _z], _dir] + _vehProperties + [_EDENinventory], 1] call CBA_fnc_waitAndExecute;

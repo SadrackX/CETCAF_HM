@@ -26,7 +26,7 @@ params [
 
 private _locations = configfile >> "cfgworlds" >> worldname >> "names";
 
-private _cities = ["NameVillage", "NameCity", "NameCityCapital", "NameLocal", "Hill", "Airport"];
+private _cities = ["NameVillage", "NameCity", "NameCityCapital", "NameLocal", "Hill", "Airport", "StrongpointArea", "BorderCrossing", "VegetationFir"];
 if (btc_p_sea) then {_cities pushBack "NameMarine";};
 
 btc_city_all = [];
@@ -38,45 +38,41 @@ for "_id" from 0 to (count _locations - 1) do {
 
     if (_type in _cities) then {
         private _position = getArray (_current >> "position");
-        if (surfaceIsWater _position) then {
-            if !(_type isEqualTo "NameMarine") then {
-                private _church = nearestTerrainObjects [_position, ["CHURCH"], 470];
-                if (_church isEqualTo []) then {
-                    private _area = 50;
-                    for "_i" from 0 to 3 do {
-                        private _new_position = [_position, 0, _area, 0.5, 0, -1, 0] call BIS_fnc_findSafePos;
-                        if (count _new_position isEqualTo 2) exitWith {
-                            _position = _new_position;
-                        };
-                        _area = _area * 2;
+        if (
+            surfaceIsWater _position &&
+            {!(_type isEqualTo "NameMarine")} &&
+            {getTerrainHeightASL _position < - 1}
+        ) then {
+            private _church = nearestTerrainObjects [_position, ["CHURCH"], 470];
+            if (_church isEqualTo []) then {
+                private _area = 50;
+                for "_i" from 0 to 3 do {
+                    private _new_position = [_position, 0, _area, 0.5, 0, -1, 0] call BIS_fnc_findSafePos;
+                    if (count _new_position isEqualTo 2) exitWith {
+                        _position = _new_position;
                     };
-                } else {
-                    _position = getPos (_church select 0);
+                    _area = _area * 2;
                 };
+            } else {
+                _position = getPos (_church select 0);
             };
         };
         private _name = getText(_current >> "name");
-        private _radius_x = getNumber(_current >> "RadiusA");
-        private _radius_y = getNumber(_current >> "RadiusB");
+        private _radius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
+        _radius = (_radius max 160) min 800;
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 
         
-        //if you want a safe area
-        if ((getMarkerPos "blufor_base") inArea [_position, 2000, 2000, 0, false]) exitWith {};
+        if ((getMarkerPos "btc_base") inArea [_position, 2000, 2000, 0, false]) exitWith {};
         
 
-        if (_radius_x < 80 || _radius_y < 80) then {
-            _radius_x = 80;
-            _radius_y = 80;
-        };
-
-        [_position, _type, _name, _radius_x, _radius_y, random 1 > _is_free_probability, _id] call btc_fnc_city_create;
+        [_position, _type, _name, _radius, random 1 > _is_free_probability, _id] call btc_fnc_city_create;
     };
 };
 
 if !(isNil "btc_custom_loc") then {
-    {_x call btc_fnc_city_create} forEach btc_custom_loc;
+    {_x call btc_fnc_city_create;} forEach btc_custom_loc;
 };
 
 btc_city_all = btc_city_all apply {if (isNil "_x") then {objNull} else {_x}};
