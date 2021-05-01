@@ -64,9 +64,9 @@ force ace_weather_windSimulation = true;
 
 // ACE Comum
 force ace_common_allowFadeMusic = true;
-ace_common_checkPBOsAction = 0;
-ace_common_checkPBOsCheckAll = false;
-ace_common_checkPBOsWhitelist = "[]";
+force ace_common_checkPBOsAction = 0;
+force ace_common_checkPBOsCheckAll = false;
+force ace_common_checkPBOsWhitelist = "[]";
 ace_common_displayTextColor = [0,0,0,0.1];
 ace_common_displayTextFontColor = [1,1,1,1];
 ace_common_settingFeedbackIcons = 1;
@@ -635,6 +635,29 @@ Achilles_var_moduleTreeDLC = false;
 Achilles_var_moduleTreeHelmet = false;
 Achilles_var_moduleTreeSearchPatch = false;
 
+// ACRE2
+acre_sys_core_automaticAntennaDirection = false;
+acre_sys_core_defaultRadioVolume = 0.8;
+force acre_sys_core_fullDuplex = false;
+acre_sys_core_godVolume = 1;
+force acre_sys_core_ignoreAntennaDirection = false;
+force acre_sys_core_interference = true;
+acre_sys_core_postmixGlobalVolume = 1;
+acre_sys_core_premixGlobalVolume = 1;
+force acre_sys_core_revealToAI = 1;
+acre_sys_core_spectatorVolume = 1;
+force acre_sys_core_terrainLoss = 1;
+force force acre_sys_core_ts3ChannelName = "Acre2";
+force force acre_sys_core_ts3ChannelPassword = "123";
+acre_sys_core_ts3ChannelSwitch = true;
+acre_sys_core_unmuteClients = true;
+force acre_sys_signal_signalModel = 2;
+
+// ACRE2 Zeus
+acre_sys_zeus_zeusCanSpectate = true;
+acre_sys_zeus_zeusCommunicateViaCamera = true;
+acre_sys_zeus_zeusDefaultVoiceSource = false;
+
 // Advanced Urban Rappelling
 force AUR_ADVANCED_RAPPELING_ITEMS_NEEDED = 2;
 force AUR_ADVANCED_RAPPELING_NEW_ACTION = true;
@@ -649,11 +672,12 @@ cba_ui_StorePasswords = 1;
 
 // CBA Weapons
 cba_disposable_dropUsedLauncher = 2;
-cba_disposable_replaceDisposableLauncher = true;
+force cba_disposable_replaceDisposableLauncher = true;
 cba_events_repetitionMode = 1;
 cba_optics_usePipOptics = true;
 
 // dzn Extended Jamming
+dzn_EJAM_AllowFullInspectMenu = true;
 force dzn_EJAM_dud_ChanceSettings = 60;
 force dzn_EJAM_fail_to_eject_ChanceSettings = 20;
 force dzn_EJAM_fail_to_extract_ChanceSettings = 20;
@@ -663,14 +687,35 @@ force dzn_EJAM_Force = true;
 force dzn_EJAM_ForceOverallChance = true;
 force dzn_EJAM_MappingSettings = "[""arifle_MX_F"",0.05,45,10,45,0,0]";
 force dzn_EJAM_OverallChanceSetting = 0.01;
+dzn_EJAM_PullBoltOnReload = true;
 force dzn_EJAM_SubsonicJamEffectSetting = "0.05";
 force dzn_EJAM_SubsonicMagazinesSettings = """cup_30rnd_subsonic_545x39_ak_m"",""cup_20rnd_subsonic_545x39_aksu_m"",""cup_30rnd_subsonic_545x39_ak74m_m"",""cup_30rnd_subsonic_545x39_ak74_plum_m"",""cup_30rnd_subsonic_762x39_ak47_m"",""cup_20rnd_subsonic_762x39_amd63_m"",""cup_30rnd_subsonic_762x39_ak47_bakelite_m"",""cup_30rnd_subsonic_762x39_ak103_bakelite_m"",""cup_30rnd_subsonic_762x39_akm_bakelite_desert_m"",""cup_30rnd_subsonic_545x39_fort224_m"",""rhs_30rnd_545x39_7u1_ak"",""rhs_45rnd_545x39_7u1_ak"",""rhs_30rnd_762x39mm_u"",""rhs_30rnd_762x39mm_bakelite_u"",""rhs_30rnd_762x39mm_polymer_u"",""hlc_30rnd_545x39_s_ak"",""hlc_30rnd_545x39_s_ak_plum"",""hlc_30rnd_545x39_s_ak_black"",""hlc_20rnd_762x51_s_fal"",""hlc_10rnd_762x51_s_fal"",""hlc_20rnd_762x51_s_g3""";
 
 // ExtensÃµes de Base ComunitÃ¡ria - Rede
-cba_network_loadoutValidation = 0;
+force cba_network_loadoutValidation = 0;
+
+// IU ACRE2
+acre_sys_godmode_rxNotification = true;
+acre_sys_godmode_rxNotificationColor = [0.8,0.8,0.8,1];
+acre_sys_godmode_txNotification = true;
+acre_sys_godmode_txNotificationCurrentChatColor = [0.8,0.8,0.8,1];
+acre_sys_godmode_txNotificationGroup1Color = [0.8,0.8,0.8,1];
+acre_sys_godmode_txNotificationGroup2Color = [0.8,0.8,0.8,1];
+acre_sys_godmode_txNotificationGroup3Color = [0.8,0.8,0.8,1];
+acre_sys_gui_volumeColorScale = [[1,1,0,0.5],[1,0.83,0,0.5],[1,0.65,0,0.5],[1,0.44,0,0.5],[1,0,0,0.5]];
+acre_sys_list_CycleRadiosColor = [0.66,0.05,1,1];
+acre_sys_list_DefaultPTTColor = [1,0.8,0,1];
+acre_sys_list_HintBackgroundColor = [0,0,0,0.8];
+acre_sys_list_HintTextFont = "RobotoCondensed";
+acre_sys_list_LanguageColor = [1,0.29,0.16,1];
+acre_sys_list_PTT1Color = [1,0.8,0,1];
+acre_sys_list_PTT2Color = [1,0.8,0,1];
+acre_sys_list_PTT3Color = [1,0.8,0,1];
+acre_sys_list_SwitchChannelColor = [0.66,0.05,1,1];
+acre_sys_list_ToggleHeadsetColor = [0.66,0.05,1,1];
 
 // LAMBS Danger
-lambs_danger_cqbRange = 60;
+force lambs_danger_cqbRange = 60;
 force lambs_danger_disableAIAutonomousManoeuvres = false;
 force lambs_danger_disableAIDeployStaticWeapons = false;
 force lambs_danger_disableAIFindStaticWeapons = false;
@@ -678,7 +723,7 @@ force lambs_danger_disableAIHideFromTanksAndAircraft = false;
 force lambs_danger_disableAIPlayerGroup = false;
 force lambs_danger_disableAIPlayerGroupReaction = false;
 force lambs_danger_disableAutonomousFlares = false;
-lambs_danger_panicChance = 0.1;
+force lambs_danger_panicChance = 0.1;
 
 // LAMBS Danger Eventhandlers
 force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
@@ -688,27 +733,27 @@ force lambs_eventhandlers_ExplosionReactionTime = 9;
 force lambs_wp_autoAddArtillery = true;
 
 // LAMBS Main
-lambs_main_combatShareRange = 200;
-lambs_main_debug_Drawing = false;
-lambs_main_debug_FSM = false;
-lambs_main_debug_FSM_civ = false;
-lambs_main_debug_functions = false;
-lambs_main_debug_RenderExpectedDestination = false;
+force lambs_main_combatShareRange = 200;
+force lambs_main_debug_Drawing = false;
+force lambs_main_debug_FSM = false;
+force lambs_main_debug_FSM_civ = false;
+force lambs_main_debug_functions = false;
+force lambs_main_debug_RenderExpectedDestination = false;
 lambs_main_disableAICallouts = false;
 lambs_main_disableAIDodge = false;
 lambs_main_disableAIFleeing = false;
 lambs_main_disableAIGestures = false;
 lambs_main_disablePlayerGroupSuppression = false;
-lambs_main_indoorMove = 0.1;
-lambs_main_maxRevealValue = 1;
-lambs_main_minFriendlySuppressionDistance = 5;
-lambs_main_minSuppressionRange = 25;
-lambs_main_radioBackpack = 2000;
+force lambs_main_indoorMove = 0.1;
+force lambs_main_maxRevealValue = 1;
+force lambs_main_minFriendlySuppressionDistance = 5;
+force lambs_main_minSuppressionRange = 25;
+force lambs_main_radioBackpack = 2000;
 lambs_main_radioDisabled = false;
-lambs_main_radioEast = 500;
-lambs_main_radioGuer = 500;
-lambs_main_radioShout = 100;
-lambs_main_radioWest = 500;
+force lambs_main_radioEast = 500;
+force lambs_main_radioGuer = 500;
+force lambs_main_radioShout = 100;
+force lambs_main_radioWest = 500;
 
 // Laxemann Immerse
 force L_Immerse_exShake = true;

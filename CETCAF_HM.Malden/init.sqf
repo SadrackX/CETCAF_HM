@@ -32,3 +32,5 @@ null = [sino,sino_1,sino_2] execVM "scripts\sino.sqf";
 //nopop=true;
 null = [150] execVM "scripts\alvos_fnc.sqf";
 null = [] execVM "scripts\SDK_LOCK\compile.sqf";
+null = [] execVM "scripts\SDK_RADIO\compile.sqf";
+[false, true] call acre_api_fnc_setupMission;

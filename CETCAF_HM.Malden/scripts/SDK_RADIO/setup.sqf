@@ -1,0 +1,1 @@
+[radio_1] call SDK_radio_init;
