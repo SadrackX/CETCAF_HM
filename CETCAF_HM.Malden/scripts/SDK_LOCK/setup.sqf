@@ -7,4 +7,4 @@
  */
 {
 	_init = [_x] call SDK_fnc_init;
-} forEach (nearestObjects [[10564.5,4103.03], ["house"], 2000]);
+} forEach (nearestObjects [getMarkerPos "btc_base", ["house"], 2000]);
