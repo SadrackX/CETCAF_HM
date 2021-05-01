@@ -392,7 +392,7 @@ class med_menu{
 			y = 0.797 * safezoneH + safezoneY;
 			w = 0.113437 * safezoneW;
 			h = 0.044 * safezoneH;
-			action = "[call MED_volunt] spawn MED_add_dmg; false";
+			action = "[call MED_volunt] remoteExecCall ['MED_add_dmg',2]; false";
 		};
 		class b_app_ex: RscButton
 		{

@@ -59,10 +59,10 @@ if (alive (_volunt)) then {
 	_value_leg_l = [_value_leg_l,1] call BIS_fnc_cutDecimals;
 	_value_leg_l = _value_leg_l / 10;
 
-	[_volunt, _value_head, "head", _head_inj] 		remoteExecCall ["ace_medical_fnc_addDamageToUnit",2];
-	[_volunt, _value_body, "body", _body_inj]		remoteExecCall ["ace_medical_fnc_addDamageToUnit",2];
-	[_volunt, _value_hand_r, "hand_r", _hand_r_inj] remoteExecCall ["ace_medical_fnc_addDamageToUnit",2];
-	[_volunt, _value_hand_l, "hand_l", _hand_l_inj] remoteExecCall ["ace_medical_fnc_addDamageToUnit",2];
-	[_volunt, _valaue_leg_r, "leg_r", _leg_r_inj] 	remoteExecCall ["ace_medical_fnc_addDamageToUnit",2];
-	[_volunt, _value_leg_l, "leg_l", _leg_l_inj] 	remoteExecCall ["ace_medical_fnc_addDamageToUnit",2];
+	[_volunt, _value_head, "head", _head_inj] 		Call ace_medical_fnc_addDamageToUnit;
+	[_volunt, _value_body, "body", _body_inj]		Call ace_medical_fnc_addDamageToUnit;
+	[_volunt, _value_hand_r, "hand_r", _hand_r_inj] Call ace_medical_fnc_addDamageToUnit;
+	[_volunt, _value_hand_l, "hand_l", _hand_l_inj] Call ace_medical_fnc_addDamageToUnit;
+	[_volunt, _valaue_leg_r, "leg_r", _leg_r_inj] 	Call ace_medical_fnc_addDamageToUnit;
+	[_volunt, _value_leg_l, "leg_l", _leg_l_inj] 	Call ace_medical_fnc_addDamageToUnit;
 };
