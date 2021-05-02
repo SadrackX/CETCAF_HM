@@ -47,7 +47,7 @@ if !(_bbr isEqualTo []) then {
     } forEach _bbr;
 };
 
-private _rope_length = 10;
+private _rope_length = 20;
 if ((_bbr isEqualTo []) OR (_ropes_check select {!isNull _x} isEqualTo [])) then {
 
     _bbr = boundingBoxReal _cargo;
@@ -87,7 +87,7 @@ btc_lifted = true;
 sleep 1;
 if ((_mass + 400) > _max_cargo) then {
     private _new_mass = _max_cargo - 1000;
-    if (_new_mass < 0) then {_new_mass = 50;};
+    if (_new_mass < 0) then {_new_mass = 50;}else{_new_mass = _new_mass/1.4;};
     [_cargo, _new_mass] remoteExecCall ["setMass", _cargo];
 };
 
