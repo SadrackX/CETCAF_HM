@@ -1,6 +1,4 @@
-params[
-	["_volunt",objNull,[objNull]]
-];
+params["_volunt"];
 injuryArray = ["stab","bullet","falling"];
 if (alive (_volunt)) then {
 	private["_head_inj","_body_inj","_hand_r_inj","_hand_l_inj","_leg_r_inj","_leg_l_inj","_value_head","_value_body","_value_hand_r","_value_hand_l","_valaue_leg_r","_value_leg_l"];
