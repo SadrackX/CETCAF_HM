@@ -53,5 +53,25 @@ if !((getVehicleCargo _veh) isEqualTo []) then {
 }, _veh] call CBA_fnc_execNextFrame;
 
 [{
-    _this call btc_fnc_log_createVehicle;
-}, [_type, [_x, _y, 0.5 + _z], _dir] + _vehProperties + [_EDENinventory], 1] call CBA_fnc_waitAndExecute;
+   (_this call btc_fnc_log_createVehicle) call dam_veh;
+}, [_type, [_x, _y, 0.5 + _z], _dir] + _vehProperties + [_EDENinventory], 0.5] call CBA_fnc_waitAndExecute;
+
+
+dam_veh = {
+	_this setDamage [0.8, false];
+	_this setVehicleAmmo 0;
+	_this setFuel 0;
+	if !(_this isKindOf "Helicopter") then {
+		_this setHit ["wheel_1_1_steering",1];
+		_this setHit ["wheel_1_2_steering",1];
+		_this setHit ["wheel_1_3_steering",1];
+		_this setHit ["wheel_1_4_steering",1];
+		_this setHit ["wheel_2_1_steering",1];
+		_this setHit ["wheel_2_2_steering",1];
+		_this setHit ["wheel_2_3_steering",1];
+		_this setHit ["wheel_2_4_steering",1];
+	};
+};
+
+
+

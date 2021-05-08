@@ -76,17 +76,4 @@ if !(_allHitPointsDamage isEqualTo []) then {
 
 _veh call btc_fnc_db_add_veh;
 
-_veh setDamage [0.8, false];
-_veh setVehicleAmmo 0;
-_veh setFuel 0;
-if !(_veh isKindOf "Helicopter") then {
-	_veh setHit ["wheel_1_1_steering",2];
-	_veh setHit ["wheel_1_2_steering",2];
-	_veh setHit ["wheel_1_3_steering",2];
-	_veh setHit ["wheel_1_4_steering",2];
-	_veh setHit ["wheel_2_1_steering",2];
-	_veh setHit ["wheel_2_2_steering",2];
-	_veh setHit ["wheel_2_3_steering",2];
-	_veh setHit ["wheel_2_4_steering",2];
-};
 _veh
