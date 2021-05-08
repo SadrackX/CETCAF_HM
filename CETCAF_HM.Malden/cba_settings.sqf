@@ -157,7 +157,7 @@ force ace_map_gestures_defaultColor = [1,0.88,0,0.7];
 force ace_map_gestures_defaultLeadColor = [1,0.88,0,0.95];
 force ace_map_gestures_enabled = true;
 force ace_map_gestures_interval = 0.03;
-force ace_map_gestures_maxRange = 7;
+force ace_map_gestures_maxRange = 14;
 force ace_map_gestures_maxRangeCamera = 14;
 force ace_map_gestures_nameTextColor = [0.2,0.2,0.2,0.3];
 force ace_map_gestures_onlyShowFriendlys = true;
@@ -212,9 +212,9 @@ force ace_ui_zeroing = true;
 force ace_viewdistance_enabled = true;
 force ace_viewdistance_limitViewDistance = 12000;
 ace_viewdistance_objectViewDistanceCoeff = 0;
-force ace_viewdistance_viewDistanceAirVehicle = 14;
-force ace_viewdistance_viewDistanceLandVehicle = 9;
-force ace_viewdistance_viewDistanceOnFoot = 9;
+ace_viewdistance_viewDistanceAirVehicle = 14;
+ace_viewdistance_viewDistanceLandVehicle = 9;
+ace_viewdistance_viewDistanceOnFoot = 9;
 
 // ACE LogÃ­stica
 force ace_cargo_enable = true;
@@ -228,15 +228,15 @@ force ace_refuel_rate = 0.6;
 force ace_repair_addSpareParts = true;
 force ace_repair_autoShutOffEngineWhenStartingRepair = false;
 force ace_repair_consumeItem_toolKit = 0;
-force ace_repair_displayTextOnRepair = true;
+force ace_repair_displayTextOnRepair = false;
 force ace_repair_engineerSetting_fullRepair = 1;
 force ace_repair_engineerSetting_repair = 1;
 force ace_repair_engineerSetting_wheel = 0;
 force ace_repair_fullRepairLocation = 3;
 force ace_repair_fullRepairRequiredItems = ["ToolKit"];
 force ace_repair_miscRepairRequiredItems = ["ToolKit"];
-force ace_repair_repairDamageThreshold = 0.6;
-force ace_repair_repairDamageThreshold_engineer = 0.4;
+force ace_repair_repairDamageThreshold = 0.799635;
+force ace_repair_repairDamageThreshold_engineer = 0.799635;
 force ace_repair_wheelRepairRequiredItems = ["ToolKit"];
 
 // ACE MÃ©dico
@@ -246,10 +246,10 @@ force ace_medical_bleedingCoefficient = 2;
 force ace_medical_blood_bloodLifetime = 900;
 force ace_medical_blood_enabledFor = 2;
 force ace_medical_blood_maxBloodObjects = 500;
-force ace_medical_fatalDamageSource = 0;
+force ace_medical_fatalDamageSource = 2;
 force ace_medical_feedback_bloodVolumeEffectType = 2;
 force ace_medical_feedback_painEffectType = 1;
-force ace_medical_fractureChance = 0.8;
+force ace_medical_fractureChance = 0.49857;
 force ace_medical_fractures = 2;
 force ace_medical_gui_enableActions = 0;
 force ace_medical_gui_enableMedicalMenu = 1;
@@ -260,7 +260,7 @@ force ace_medical_gui_openAfterTreatment = true;
 force ace_medical_ivFlowRate = 5.97838;
 force ace_medical_limping = 2;
 force ace_medical_painCoefficient = 2;
-force ace_medical_painUnconsciousChance = 0.298713;
+force ace_medical_painUnconsciousChance = 0.245041;
 force ace_medical_playerDamageThreshold = 3;
 force ace_medical_spontaneousWakeUpChance = 0.5;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 8;
@@ -310,7 +310,7 @@ force ace_map_BFT_Enabled = false;
 force ace_map_BFT_HideAiGroups = false;
 force ace_map_BFT_Interval = 1;
 force ace_map_BFT_ShowPlayerNames = false;
-force ace_map_DefaultChannel = 0;
+force ace_map_DefaultChannel = 5;
 force ace_map_mapGlow = true;
 force ace_map_mapIllumination = true;
 force ace_map_mapLimitZoom = false;
@@ -323,8 +323,8 @@ force ace_markers_timestampHourFormat = 24;
 
 // ACE Menu de interaÃ§Ã£o
 force ace_gestures_showOnInteractionMenu = 2;
-force ace_interact_menu_actionOnKeyRelease = true;
-force ace_interact_menu_addBuildingActions = true;
+ace_interact_menu_actionOnKeyRelease = true;
+force ace_interact_menu_addBuildingActions = false;
 force ace_interact_menu_alwaysUseCursorInteraction = true;
 force ace_interact_menu_alwaysUseCursorSelfInteraction = true;
 ace_interact_menu_colorShadowMax = [0,0,0,1];
@@ -335,11 +335,11 @@ ace_interact_menu_consolidateSingleChild = false;
 ace_interact_menu_cursorKeepCentered = false;
 ace_interact_menu_cursorKeepCenteredSelfInteraction = false;
 force ace_interact_menu_menuAnimationSpeed = 0;
-force ace_interact_menu_menuBackground = 0;
-force ace_interact_menu_menuBackgroundSelf = 0;
+ace_interact_menu_menuBackground = 0;
+ace_interact_menu_menuBackgroundSelf = 0;
 ace_interact_menu_selectorColor = [1,0,0];
-force ace_interact_menu_shadowSetting = 2;
-force ace_interact_menu_textSize = 1;
+ace_interact_menu_shadowSetting = 2;
+ace_interact_menu_textSize = 2;
 ace_interact_menu_useListMenu = false;
 ace_interact_menu_useListMenuSelf = false;
 
@@ -365,7 +365,7 @@ force ace_magazinerepack_timePerMagazine = 2;
 force ace_captives_allowHandcuffOwnSide = true;
 force ace_captives_allowSurrender = true;
 force ace_captives_requireSurrender = 2;
-force ace_captives_requireSurrenderAi = false;
+force ace_captives_requireSurrenderAi = true;
 
 // ACE Pylons
 force ace_pylons_enabledForZeus = true;
@@ -398,7 +398,7 @@ force ace_overheating_unJamOnreload = false;
 
 // ACE Trancar VeÃ­culos
 force ace_vehiclelock_defaultLockpickStrength = 10;
-force ace_vehiclelock_lockVehicleInventory = false;
+force ace_vehiclelock_lockVehicleInventory = true;
 force ace_vehiclelock_vehicleStartingLockState = 0;
 
 // ACE Trenches
@@ -466,10 +466,10 @@ force acex_field_rations_enabled = true;
 force acex_field_rations_hudShowLevel = 50;
 force acex_field_rations_hudTransparency = -1;
 force acex_field_rations_hudType = 1;
-force acex_field_rations_hungerSatiated = 4.99602;
+force acex_field_rations_hungerSatiated = 8;
 force acex_field_rations_terrainObjectActions = true;
-force acex_field_rations_thirstQuenched = 4.99602;
-force acex_field_rations_timeWithoutFood = 4;
+force acex_field_rations_thirstQuenched = 5;
+force acex_field_rations_timeWithoutFood = 6;
 force acex_field_rations_timeWithoutWater = 4;
 force acex_field_rations_waterSourceActions = 2;
 
@@ -485,7 +485,7 @@ force acex_viewrestriction_modeSelectiveSea = 1;
 acex_viewrestriction_preserveView = false;
 
 // ACEX Volume
-force acex_volume_enabled = true;
+force acex_volume_enabled = false;
 force acex_volume_fadeDelay = 3;
 force acex_volume_lowerInVehicles = true;
 force acex_volume_reduction = 5;
@@ -653,6 +653,10 @@ acre_sys_core_ts3ChannelSwitch = true;
 acre_sys_core_unmuteClients = true;
 force acre_sys_signal_signalModel = 2;
 
+// ACRE2 Gestures
+acre_sys_gestures_enabled = true;
+acre_sys_gestures_stopADS = false;
+
 // ACRE2 Zeus
 acre_sys_zeus_zeusCanSpectate = true;
 acre_sys_zeus_zeusCommunicateViaCamera = true;
@@ -715,7 +719,7 @@ acre_sys_list_SwitchChannelColor = [0.66,0.05,1,1];
 acre_sys_list_ToggleHeadsetColor = [0.66,0.05,1,1];
 
 // LAMBS Danger
-force lambs_danger_cqbRange = 60;
+force lambs_danger_cqbRange = 100.264;
 force lambs_danger_disableAIAutonomousManoeuvres = false;
 force lambs_danger_disableAIDeployStaticWeapons = false;
 force lambs_danger_disableAIFindStaticWeapons = false;
@@ -723,7 +727,7 @@ force lambs_danger_disableAIHideFromTanksAndAircraft = false;
 force lambs_danger_disableAIPlayerGroup = false;
 force lambs_danger_disableAIPlayerGroupReaction = false;
 force lambs_danger_disableAutonomousFlares = false;
-force lambs_danger_panicChance = 0.1;
+force lambs_danger_panicChance = 0.245041;
 
 // LAMBS Danger Eventhandlers
 force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
@@ -744,7 +748,7 @@ lambs_main_disableAIDodge = false;
 lambs_main_disableAIFleeing = false;
 lambs_main_disableAIGestures = false;
 lambs_main_disablePlayerGroupSuppression = false;
-force lambs_main_indoorMove = 0.1;
+force lambs_main_indoorMove = 0.252964;
 force lambs_main_maxRevealValue = 1;
 force lambs_main_minFriendlySuppressionDistance = 5;
 force lambs_main_minSuppressionRange = 25;
