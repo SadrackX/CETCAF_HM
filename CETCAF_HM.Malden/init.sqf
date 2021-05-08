@@ -29,7 +29,6 @@ null = [] execVM "scripts\SDK_SATCOM\compile.sqf";
 null = [] execVM "scripts\SDK_MED\compile.sqf";
 null = [[mnt_01,mnt_02,mnt_03,mnt_04,mnt_05,mnt_06,mnt_07],playableUnits] execVM "scripts\SDK_CAM\Feedinit.sqf";
 null = [sino,sino_1,sino_2] execVM "scripts\sino.sqf";
-//nopop=true;
 //null = [150] execVM "scripts\alvos_fnc.sqf";
 null = [] execVM "scripts\SDK_LOCK\compile.sqf";
 null = [] execVM "scripts\SDK_RADIO\compile.sqf";

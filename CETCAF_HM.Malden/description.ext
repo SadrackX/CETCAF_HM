@@ -19,7 +19,7 @@ respawnDelay 					= 60; 									// Players spectate for 5 minutes(300s) between
 respawnTemplates[] 				= {"Counter"}; 							// Enables the spectator template for all  ace_spectator
 cba_settings_hasSettingsFile	= 1;
 disableChannels[] 				= {0,1,2,4,5,6};    					// 0 = Global | 1 = Side | 2 = Command | 3 = Group | 4 = Vehicle | 5 = Direct | 6 = System
-
+disabledAI = 1;
 #include "core\fnc\common\dlg.hpp"
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"

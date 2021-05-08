@@ -42,7 +42,7 @@ private _area = createMarker [format ["sm_%1", _pos], _pos];
 _area setMarkerShape "RECTANGLE";
 _area setMarkerBrush "SolidBorder";
 _area setMarkerSize [_offset, _offset];
-_area setMarkerAlpha 0.3;
+_area setMarkerAlpha 0.1;
 _area setmarkercolor "colorBlue";
 
 //// Randomise composition \\\\
