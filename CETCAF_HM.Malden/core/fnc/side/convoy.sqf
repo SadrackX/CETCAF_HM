@@ -51,17 +51,19 @@ private _marker1 = createMarker [format ["sm_2_%1", _pos1], _pos1];
 _marker1 setMarkerType "hd_flag";
 [_marker1, "str_a3_campaign_b_m06_marker01"] remoteExecCall ["btc_fnc_set_markerTextLocal", [0, -2] select isDedicated, _marker1]; //Convoy start
 _marker1 setMarkerSize [0.6, 0.6];
+_marker1 setMarkerAlpha 0.3;
 
 private _marker2 = createMarker [format ["sm_2_%1", _pos2], _pos2];
 _marker2 setMarkerType "hd_flag";
 [_marker2, "STR_BTC_HAM_SIDE_CONVOY_MRKEND"] remoteExecCall ["btc_fnc_set_markerTextLocal", [0, -2] select isDedicated, _marker2]; //Convoy end
 _marker2 setMarkerSize [0.6, 0.6];
+_marker2 setMarkerAlpha 0.3;
 
 private _area = createMarker [format ["sm_%1", _pos2], _pos2];
 _area setMarkerShape "ELLIPSE";
 _area setMarkerBrush "SolidBorder";
 _area setMarkerSize [_radius/2, _radius/2];
-_area setMarkerAlpha 0.3;
+_area setMarkerAlpha 0;
 _area setmarkercolor "colorBlue";
 
 private _markers = [_marker1, _marker2, _area];

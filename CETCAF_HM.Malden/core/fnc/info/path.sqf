@@ -55,6 +55,7 @@ private _agent = calculatePath [_type, _behaviour, _startPos, _endPos];
         _mrk setMarkerAlpha 0.7;
         _mrk setMarkerColor _color;
         _mrk setMarkerDir _direction;
+		_mrk setMarkerAlpha 0;
 
         if (btc_debug) then {
             _mrk setMarkerText format ["%1°", floor _direction];
