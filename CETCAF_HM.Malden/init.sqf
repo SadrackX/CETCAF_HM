@@ -33,3 +33,5 @@ null = [sino,sino_1,sino_2] execVM "scripts\sino.sqf";
 null = [] execVM "scripts\SDK_LOCK\compile.sqf";
 null = [] execVM "scripts\SDK_RADIO\compile.sqf";
 [false, true] call acre_api_fnc_setupMission;
+
+["addDamPass", {_this call ace_medical_fnc_addDamageToUnit}] call CBA_fnc_addEventHandler;

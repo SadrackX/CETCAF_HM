@@ -9,9 +9,9 @@ if (alive (_volunt)) then {
 	{
 		if (_x != 0) then {
 			if((_body_index select _forEachIndex) == 3) then [{
-				[_volunt, ([_x,1] call BIS_fnc_cutDecimals)/10, (_body_part select _forEachIndex), (selectrandom injuryArray)] Call ace_medical_fnc_addDamageToUnit;
+				["addDamPass",[_volunt, ([_x,1] call BIS_fnc_cutDecimals)/10, (_body_part select _forEachIndex), (selectrandom injuryArray)], _volunt] call CBA_fnc_targetEvent;
 			},{
-				[_volunt, ([_x,1] call BIS_fnc_cutDecimals)/10, (_body_part select _forEachIndex), (injuryArray select (_body_index select _forEachIndex))] Call ace_medical_fnc_addDamageToUnit;
+				["addDamPass",[_volunt, ([_x,1] call BIS_fnc_cutDecimals)/10, (_body_part select _forEachIndex), (injuryArray select (_body_index select _forEachIndex))], _volunt] call CBA_fnc_targetEvent;
 			}];
 		};
 	}forEach _injury_value;
